@@ -1,11 +1,11 @@
 name 'mysql_config'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Varun Sharma'
+maintainer_email 'varunge@gmail.com'
 license 'All Rights Reserved'
 description 'Installs/Configures mysql_config'
 version '0.1.0'
 chef_version '>= 15.0'
-
+depends 'mysql', '~> 10.1.3'
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
 # uploaded to a Supermarket.

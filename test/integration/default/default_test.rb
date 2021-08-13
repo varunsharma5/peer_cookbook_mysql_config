@@ -14,3 +14,14 @@ end
 describe port(80), :skip do
   it { should_not be_listening }
 end
+
+control 'mysql_database' do
+  impact 1.0
+  title 'test creation and removal of databases'
+  sql = mysql_session('root', 'varun1234', '127.0.0.1', 3306)
+
+  describe sql.query('show databases') do
+    its(:stdout) { should match(/information_schema/) }
+    its(:stdout) { should_not match(/performance_schemas/) }
+  end
+end
