@@ -3,6 +3,7 @@
 # Recipe:: default
 #
 # Copyright:: 2021, The Authors, All Rights Reserved.
+apt_update
 
 mysql_service 'foo' do
   port '3306'
