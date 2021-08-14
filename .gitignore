@@ -24,3 +24,4 @@ Berksfile.lock
 .idea/
 .vscode/
 
+sql_passwords.json
